@@ -9,15 +9,24 @@
 </head>
 <body>
 	<div class="global-wrapper">
+		<div class="notification" id="notificationBTN">
+			<div class="notificationCounter"><p id="notificationCounter">1</p></div>
+			<img src="media/notification.svg" alt="Notifications">
+			<div class="notificitaionsModule none" id="notificitaionsModule">
+				<p>Looking for something specific? <br> Try searching for it in the terminal</p>
+			</div>
+		</div>
 		<div class="centerWrapper">
 			<div class="terminalHeader">
 				<ul>
 					<li></li><li></li><li></li>
 				</ul>
 			</div>
-			<div class="terminal">
+			<div class="terminal" id="terminalWrapper">
 				<form id="terminal">
-					<label for="terminalInfo">[Normann@localhost ~]# </label><input tabindex="0" onkeyup="search()" autofocus id="terminalInfo" class="navigate" type="text" name="terminalInfo" autocomplete="off">
+					<div class="commandLine">
+						<label for="terminalInfo">[Normann@localhost ~]# </label><input tabindex="0" onkeyup="search()" autofocus id="terminalInfo" class="navigate" type="text" name="terminalInfo" autocomplete="off">
+					</div>
 				</form>
 				<ul id="search">
 					<a class="none navigate" id="portfolio" href="pages/portfolio.html"><li>Portfolio</li></a>
