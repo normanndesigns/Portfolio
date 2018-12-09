@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.bgc{
+	background-color: #1E2127;
+}
+.thc{
+	background-color: #202225;
+}
+.tc{
+	background-color: #292C33;
+}
 .flex{
 	display: flex;
 }
@@ -172,4 +182,57 @@
 	display: flex;
 	border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+}
+/*   Contact   */
+.contactForm{
+	width: 80%;
+	background-color: #292C33;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	box-sizing: border-box;
+	padding: 40px 0px 40px 0px;
+	border-radius: 5px;
+}
+.contactForm h2{
+	width: 80%;
+	color: #ffffff;
+	margin-bottom: 15px;
+}
+.contactForm input{
+	width: 80%;
+    height: 35px;
+    border: 0px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+	padding: 10px;
+	outline: none;
+	border-bottom: 2px solid #9540e4;
+	color: #ffffff;
+	background-color: #292C33;
+}
+.contactForm textarea{
+	width: 80%;
+	box-sizing: border-box;
+	min-height: 200px;
+	margin-bottom: 15px;
+	resize: none;
+	outline: none;
+	padding: 10px;
+	font-size: 14px;
+	font-family: 'Open Sans';
+	background-color: #292C33;
+	border: 0px;
+	border-bottom: 2px solid #9540e4;
+	color: #ffffff;
+}
+.contactForm input:last-of-type{
+	color: #ffffff;
+	background-color: #9540e4
+}
+.contactForm input:last-of-type:hover{
+	color: #ffffff;
+	background-color: blueviolet;
+	cursor: pointer;
 }
