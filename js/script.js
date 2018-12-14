@@ -1,5 +1,8 @@
 var terminal = document.getElementById('terminal'), 
 notificationBTN = document.getElementById('notificationBTN'), 
+portfolioWrapper = document.getElementById('portfolioWrapper'),
+overlay = document.getElementById('overlay'),
+backBTN = document.getElementById('backBTN'),
 notificitaionsModule = document.getElementById('notificitaionsModule'),
 terminalWrapper = document.getElementById('terminalWrapper'),
 terminalInfo = document.getElementById('terminalInfo');
@@ -12,18 +15,12 @@ window.addEventListener('load', function() {
     SpatialNavigation.makeFocusable();
     SpatialNavigation.focus();
 });
-notificationBTN.addEventListener('click', function(){
-    onOrOff(notificitaionsModule);
-});
-terminalWrapper.addEventListener('click', function(){
-    terminalInfo.focus();
-});
-
-function onOrOff(object){
-    if(object.className == "notificitaionsModule flex"){
-        display(object, "notificitaionsModule none");
-    }else if(object.className == "notificitaionsModule none"){
-        display(object, "notificitaionsModule flex");
+/*   Functions   */
+function onOrOff(show, hide, object){
+    if(object.className == show){
+        display(object, hide);
+    }else if(object.className == hide){
+        display(object, show);
     }
 }
 
@@ -46,4 +43,46 @@ function search(){
             } 
         }
     }
-};
+}
+
+
+/*   Functions   */
+
+if(notificationBTN != null){
+    notificationBTN.addEventListener('click', function(){
+        onOrOff("notificitaionsModule flex", "notificitaionsModule none", notificitaionsModule);
+    });
+}
+
+if(backBTN != null){
+    backBTN.addEventListener('click', function(){
+        console.log('ÆAOHSPOAISDPIAHUPSDUIAPISUDB')
+        window.location.replace = "google.com";
+    });
+}
+
+if(terminalWrapper != null){
+    terminalWrapper.addEventListener('click', function(){
+        terminalInfo.focus();
+    });
+}
+
+if(portfolioWrapper != null){
+    portfolioWrapper.addEventListener('click', function(e){
+        if (e.target !== e.currentTarget) {
+            display(overlay, 'overlay flex');
+        }
+        e.stopPropagation();
+    });
+    document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        if (evt.keyCode == 27) {
+            display(overlay, 'overlay none');
+        }
+    };
+    overlay.addEventListener('click', function(e){
+        if (e.target == e.currentTarget) {
+            display(overlay, 'overlay none');
+        }
+    });
+}
