@@ -3,7 +3,7 @@ notificationBTN = document.getElementById('notificationBTN'),
 portfolioWrapper = document.getElementById('portfolioWrapper'),
 overlay = document.getElementById('overlay'),
 backBTN = document.getElementById('backBTN'),
-notificitaionsModule = document.getElementById('notificitaionsModule'),
+notificationsModule = document.getElementById('notificationsModule'),
 terminalWrapper = document.getElementById('terminalWrapper'),
 terminalInfo = document.getElementById('terminalInfo');
 
@@ -48,15 +48,14 @@ function search(){
 
 /*   Functions   */
 
-if(notificationBTN != null){
-    notificationBTN.addEventListener('click', function(){
-        onOrOff("notificitaionsModule flex", "notificitaionsModule none", notificitaionsModule);
+if(notificationsBTN != null){
+    notificationsBTN.addEventListener('click', function(){
+        onOrOff("notificationsModule flex", "notificationsModule none", notificationsModule);
     });
 }
 
 if(backBTN != null){
     backBTN.addEventListener('click', function(){
-        console.log('ÆAOHSPOAISDPIAHUPSDUIAPISUDB')
         window.location.replace = "google.com";
     });
 }

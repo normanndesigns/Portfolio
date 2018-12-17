@@ -26,7 +26,8 @@ body{
 	background-color: #1E2127;
 	font-family: 'Open Sans';
 }
-.notification{
+/*   Notification   */
+.notifications{
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -38,10 +39,10 @@ body{
 	justify-content: center;
 	align-items: center;
 }
-.notification:hover{
+.notifications:hover{
 	cursor: pointer;
 }
-.notificationCounter{
+.notificationsCounter{
 	width: 14px;
     height: 14px;
     background-color: red;
@@ -55,11 +56,11 @@ body{
     justify-content: center;
     align-items: center;
 }
-.notification img{
+.notifications img{
 	width: 35px;
 	margin-top: -3px;
 }
-.notificitaionsModule{
+.notificationsModule{
 	width: 325px;
     background-color: #ffffff;
     position: absolute;
@@ -71,7 +72,7 @@ body{
 	line-height: 22px;
 	justify-content: center;
 }
-.notificitaionsModule:after{
+.notificationsModule:after{
 	content: "";
     display: block;
     position: absolute;
@@ -83,9 +84,11 @@ body{
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent #ffffff;
 }
-.notificitaionsModule p{
+.notificationsModule p{
 	display: inline;
 }
+/*   Notification   */
+/*   Back Button   */
 .backBTN{
 	position: fixed;
 	z-index: 10;
@@ -95,15 +98,16 @@ body{
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	background-color: #292C33;
 	outline: none;
 }
 .backBTN img{
-	width: 35px;
+	width: 25px;
 	margin-left: -5px;
 }
+/*   Back Button   */
 .centerWrapper{
 	font-family: 'Open Sans', sans-serif;
 	background-color: #292d31;
